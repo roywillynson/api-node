@@ -1,0 +1,42 @@
+{
+  "name": "apiloginsignup",
+  "version": "1.0.0",
+  "description": "Api de Login y SignUp",
+  "main": "server.js",
+  "scripts": {
+    "build": "babel api --out-dir build",
+    "dev": "cross-env NODE_ENV=development nodemon api/index.js --exec babel-node",
+    "start": "cross-env NODE_ENV=production node build/index.js",
+    "test": "cross-env process.env.NODE_ENV=test jest"
+  },
+  "keywords": [
+    "Login",
+    "SignUp",
+    "Authenticate",
+    "Autorizatioc"
+  ],
+  "author": "Roy Willynson <roywillinsondelorbemedina@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^4.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.1.0",
+    "sequelize": "^6.3.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/register": "^7.11.5",
+    "cross-env": "^7.0.2",
+    "jest": "^26.4.2",
+    "jest-cli": "^26.4.2",
+    "nodemon": "^2.0.4",
+    "supertest": "^5.0.0"
+  }
+}
